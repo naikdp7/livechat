@@ -20,6 +20,7 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /// Files imported from livechat android sdk
+import com.livechatinc.inappchat.ChatWindowActivity;
 import com.livechatinc.inappchat.ChatWindowConfiguration;
 import com.livechatinc.inappchat.ChatWindowErrorType;
 import com.livechatinc.inappchat.ChatWindowView;
@@ -79,7 +80,7 @@ public class LivechatPlugin implements FlutterPlugin, MethodCallHandler, Activit
       }else if (visitorEmail.trim().equalsIgnoreCase("")) {
         result.error("VISITOR EMAIL EMPTY", null, null);
       }else{
-        Intent intent = new Intent(activity, com.livechatinc.inappchat.ChatWindowActivity.class);
+                Intent intent = new Intent(activity, ChatWindowActivity.class);
         Bundle config = new ChatWindowConfiguration.Builder()
                 .setLicenceNumber(licenseNo)
                 .setGroupId(groupId)
