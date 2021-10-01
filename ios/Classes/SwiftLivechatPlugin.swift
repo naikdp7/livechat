@@ -1,6 +1,6 @@
 import Flutter
 import UIKit
-import LiveChat
+import LiveChatFlutter
 
 public class SwiftLivechatPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
@@ -29,12 +29,12 @@ public class SwiftLivechatPlugin: NSObject, FlutterPlugin {
             }else if (visitorEmail == ""){
                  result(FlutterError(code: "", message: "VISITOR EMAIL EMPTY", details: nil))
             }else{
-                LiveChat.licenseId = licenseNo // Set your licence number here
-                LiveChat.groupId = groupId // Optionally, You can route your customers to specific group of agents by providing groupId
-                LiveChat.name = visitorName // You can provide customer name or email if they are known, so a customer will not need to fill out the pre-chat survey:
-                LiveChat.email = visitorEmail // You can provide customer name or email if they are known, so a customer will not need to fill out the pre-chat survey:
+                LiveChatFlutter.licenseId = licenseNo // Set your licence number here
+                LiveChatFlutter.groupId = groupId // Optionally, You can route your customers to specific group of agents by providing groupId
+                LiveChatFlutter.name = visitorName // You can provide customer name or email if they are known, so a customer will not need to fill out the pre-chat survey:
+                LiveChatFlutter.email = visitorEmail // You can provide customer name or email if they are known, so a customer will not need to fill out the pre-chat survey:
 
-                LiveChat.presentChat()
+                LiveChatFlutter.presentChat()
                 result(nil)
             }
         default:
