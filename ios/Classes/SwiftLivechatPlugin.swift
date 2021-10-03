@@ -1,6 +1,6 @@
 import Flutter
 import UIKit
-import LiveChatFlutter
+import LiveChatFlutterNew
 
 public class SwiftLivechatPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
